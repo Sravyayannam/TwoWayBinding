@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable name="user" type="com.example.yannamreddy.onewaybinding.User"/>
+        <variable name="activity" type="com.example.yannamreddy.onewaybinding.MainActivity"/>
+        <variable name="converter" type="com.example.yannamreddy.onewaybinding.Converter"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="10sp"
+        android:paddingLeft="10sp"
+        android:paddingRight="10sp"
+        android:paddingTop="10sp"
+        android:gravity="center"
+        tools:context=".databinding.MainActivity">
+
+        <TextView
+            android:id="@+id/resultage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_above="@id/resultEmail"
+            android:layout_centerHorizontal="true"
+            android:textSize="16sp"
+            android:text="@={converter.toString(user.age)}"/>
+        <!--android:text="@{String.valueOf(user.getAge())}"-->
+
+        <!--<TextView
+              android:id="@+id/resultage"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="20dp"
+              android:layout_above="@id/resultEmail"
+              android:layout_centerHorizontal="true"
+              android:textSize="16sp"
+              android:text="@{user.age}"/>-->
+        <!-- <TextView
+              android:id="@+id/isNewMsg"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="20dp"
+              android:layout_above="@id/resultEmail"
+              android:layout_centerHorizontal="true"
+              android:textSize="16sp"
+              android:text="@{user.email}"/>-->
+
+        <TextView
+            android:id="@+id/resultEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_above="@id/name"
+            android:layout_centerHorizontal="true"
+            android:textSize="16sp"
+            android:text="@{user.email}"/>
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textSize="18sp"
+            android:text="@{user.name}"/>
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/name"
+            android:maxLength="5"
+            android:inputType="textEmailAddress"
+            android:text="@={user.email}"/>
+
+
+        <EditText
+            android:id="@+id/age"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/email"
+            android:inputType="textEmailAddress"
+            android:text="@={converter.toString(user.age)}"/>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/age"
+            android:text="Get data"
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white"
+
+           android:onClick="@{()->activity.onButtonClick(user.email)}"/>
+
+        <!--  <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="20dp"
+              android:layout_below="@id/button"
+              android:layout_centerHorizontal="true"
+              android:textSize="16sp"
+              android:text="@{user.email}"/> -->
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,4 @@
+#Mon Oct 29 11:16:42 PDT 2018
+base.0=/usr/local/google/home/yannamreddy/Documents/Cases/workspace/android-BluetoothLeGatt-master/Application/build/intermediates/transforms/dexMerger/debug/18
+path.0=classes.dex
+renamed.0=classes.dex

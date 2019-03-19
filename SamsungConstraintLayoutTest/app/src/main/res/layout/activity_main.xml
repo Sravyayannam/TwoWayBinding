@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<Transition
+    android:id="@+id/transition_off_to_on"
+    app:constraintSetEnd="@+id/state_on"
+    app:constraintSetStart="@+id/state_off"
+    app:duration="100"
+    app:interpolator="linear" />
+
+<Transition
+    android:id="@+id/transition_on_to_off"
+    app:constraintSetEnd="@+id/state_off"
+    app:constraintSetStart="@+id/state_on"
+    app:duration="100"
+    app:interpolator="linear" />
+
+<ConstraintSet android:id="@+id/state_off">
+    <Constraint
+        android:id="@+id/thumb"
+        android:layout_width="@dimen/text_toggle_button_thumb_size"
+        android:layout_height="@dimen/text_toggle_button_thumb_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</ConstraintSet>
+<ConstraintSet android:id="@+id/state_on">
+    <Constraint
+        android:id="@+id/thumb"
+        android:layout_width="@dimen/text_toggle_button_thumb_size"
+        android:layout_height="@dimen/text_toggle_button_thumb_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</ConstraintSet>
+
+
+</MotionScene>

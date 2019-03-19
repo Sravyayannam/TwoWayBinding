@@ -1,0 +1,36 @@
+{
+    "logs": [
+        {
+            "outputFile": "/usr/local/google/home/yannamreddy/Documents/Cases/workspace/android-BluetoothLeGatt-master/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hi/values-hi.xml",
+            "map": [
+                {
+                    "source": "/usr/local/google/home/yannamreddy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/6a4a4a55d17549ad137c0076e6144ccd/res/values-hi/values-hi.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,211,308,418,504,606,728,805,883,973,1082,1185,1287,1397,1498,1613,1775,1876",
+                        "endColumns": "105,96,109,85,101,121,76,77,89,108,102,101,109,100,114,161,100,79",
+                        "endOffsets": "206,303,413,499,601,723,800,878,968,1077,1180,1282,1392,1493,1608,1770,1871,1951"
+                    }
+                },
+                {
+                    "source": "/usr/local/google/home/yannamreddy/.gradle/caches/transforms-1/files-1.1/support-compat-27.0.2.aar/446c0067044700a2dc2ada525788f12c/res/values-hi/values-hi.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "20",
+                        "startColumns": "4",
+                        "startOffsets": "1956",
+                        "endColumns": "100",
+                        "endOffsets": "2052"
+                    }
+                }
+            ]
+        }
+    ]
+}
